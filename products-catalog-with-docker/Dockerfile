@@ -9,6 +9,6 @@ COPY package.json /usr/src/app
 RUN npm install
 #bundle app src
 COPY . /usr/src/app
-RUN ./node_modules/typescript/bin/tsc -p src
+RUN ./node_modules/typescript/bin/tsc -p ./usr/src/app/src
 EXPOSE 3000
 CMD [ "npm" , "start" ]
