@@ -7,6 +7,7 @@ WORKDIR /usr/src/app
 #install dependencies
 COPY package.json /usr/src/app
 RUN npm install
+RUN node_modules/typescript/bin/tsc -p src
 #bundle app src
 COPY . /usr/src/app
 EXPOSE 3000
